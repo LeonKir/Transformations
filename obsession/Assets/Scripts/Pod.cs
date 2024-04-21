@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Pod : MonoBehaviour
@@ -14,7 +12,9 @@ public class Pod : MonoBehaviour
 
     private void Increase()
     {
-        scaleChange = new Vector3(+0.01f, +0.01f, +0.01f);
+        float magnificationValue = 0.1f;
+
+        scaleChange = new Vector3(+magnificationValue, +magnificationValue, +magnificationValue);
 
         transform.localScale += scaleChange * _increaseSpeed;
     }
